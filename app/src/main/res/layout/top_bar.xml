@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/topBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/appBackground"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:contentDescription="@string/profile_image"
+        android:src="@drawable/profile_image"
+        android:layout_marginStart="@dimen/averageMargin"
+        android:layout_marginTop="@dimen/topBarMargin"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hi_jerry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hi_jerry"
+        android:textSize="14dp"
+        android:textColor="@color/hiJerryColor"
+        android:fontFamily="@font/ibm_plex_sans_arabic_medium"
+        android:layout_marginTop="4.5dp"
+        android:layout_marginStart="@dimen/smallMargin"
+        android:includeFontPadding="false"
+        app:layout_constraintStart_toEndOf="@+id/profile_image"
+        app:layout_constraintTop_toTopOf="@+id/profile_image" />
+
+    <TextView
+        android:id="@+id/jerry_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+        android:includeFontPadding="false"
+        android:text="@string/which_tom_do_you_want_to_buy"
+        android:textColor="@color/lightGray"
+        android:textSize="12dp"
+        android:layout_marginStart="@dimen/smallMargin"
+        app:layout_constraintStart_toEndOf="@+id/profile_image"
+        app:layout_constraintTop_toBottomOf="@+id/hi_jerry" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_boreder"
+        android:layout_marginTop="@dimen/topBarMargin"
+        android:layout_marginEnd="@dimen/averageMargin"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bell"
+            android:background="@drawable/bell"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/smallMargin"
+            android:contentDescription="@string/bell" />
+        <TextView
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:id="@+id/notification_number"
+            android:background="@drawable/notification_number_container"
+            android:text="3"
+            android:textSize="10dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_gravity="end"
+            android:translationY="-5dp"
+            android:fontFamily="@font/ibm_plex_sans_arabic_medium"/>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
