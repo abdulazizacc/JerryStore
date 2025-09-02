@@ -15,7 +15,7 @@
     <EditText
         android:id="@+id/search"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginStart="@dimen/averageMargin"
         android:autofillHints="emailAddress"
         android:background="@drawable/search_background"
@@ -26,7 +26,8 @@
         android:imeOptions="actionSearch"
         android:inputType="text"
         android:paddingStart="12dp"
-        android:textSize="14sp"
+        android:textSize="14dp"
+        android:textFontWeight="400"
         android:layout_marginEnd="@dimen/smallMargin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/filterLayout"
@@ -50,5 +51,65 @@
             android:layout_margin="@dimen/smallMargin"
             android:background="@drawable/ic_filter" />
     </FrameLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="92dp"
+        android:layout_marginStart="@dimen/averageMargin"
+        android:layout_marginEnd="@dimen/averageMargin"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal"
+        android:background="@drawable/gradient_blue_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/filterLayout">
+
+        <TextView
+            android:id="@+id/heading_card_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+            android:text="@string/buy_1_tom_and_get_2_for_free"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:layout_marginStart="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/ibm_plex_sans_arabic_medium"
+            android:text="@string/adopt_tom_free_fail_free_guarantee"
+            android:textColor="@color/secondaryText"
+            android:textSize="12dp"
+            app:layout_constraintStart_toStartOf="@+id/heading_card_text"
+            app:layout_constraintTop_toBottomOf="@+id/heading_card_text" />
+
+        <ImageView
+            android:layout_width="139.22dp"
+            android:layout_height="113.69dp"
+            android:background="@drawable/ellipse_1"
+            android:translationX="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="132.05dp"
+            android:layout_height="110.74dp"
+            android:background="@drawable/ellipse_1"
+            android:translationX="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="108dp"
+            android:background="@drawable/tom_counting_money"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

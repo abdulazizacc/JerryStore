@@ -6,4 +6,5 @@
     <color name="hiJerryColor">#1F1F1E</color>
     <color name="lightGray">#A5A6A4</color>
     <color name="blue">#03578A</color>
+    <color name="secondaryText">#CCFFFFFF</color>
 </resources>
