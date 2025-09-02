@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/search_filter"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/appBackground"
-    android:clipChildren="false"
-    android:clipToPadding="false"
-    tools:context=".MainActivity">
-
-    <include layout="@layout/top_bar" />
+    android:layout_height="match_parent">
 
     <EditText
         android:id="@+id/search"
@@ -41,7 +34,7 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/filter_background"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topBar">
+        app:layout_constraintTop_toBottomOf="parent">
         <ImageButton
             android:id="@+id/filter_button"
             android:layout_width="wrap_content"
@@ -50,5 +43,4 @@
             android:layout_margin="@dimen/smallMargin"
             android:background="@drawable/ic_filter" />
     </FrameLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

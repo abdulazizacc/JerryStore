@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/appBackground"
+    android:layout_marginBottom="4dp"
     android:clipChildren="false"
     android:clipToPadding="false"
     tools:context=".MainActivity">
