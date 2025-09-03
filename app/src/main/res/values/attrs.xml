@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <declare-styleable name="TomCardView">
-        <attr name="cardImage" format="reference"/>
-        <attr name="cardTitle" format="string"/>
-        <attr name="cardDescription" format="string"/>
-        <attr name="cardCost" format="string"/>
-    </declare-styleable>
-</resources>

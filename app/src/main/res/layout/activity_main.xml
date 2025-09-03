@@ -1,361 +1,777 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/appBackground"
-    android:clipChildren="false"
-    android:clipToPadding="false"
     tools:context=".MainActivity">
 
-    <include layout="@layout/top_bar" />
-
-    <EditText
-        android:id="@+id/search"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="@dimen/averageMargin"
-        android:layout_marginEnd="@dimen/smallMargin"
-        android:autofillHints="emailAddress"
-        android:background="@drawable/search_background"
-        android:drawableStart="@drawable/search_normal"
-        android:drawablePadding="8dp"
-        android:fontFamily="@font/ibm_plex_sans_arabic_regular"
-        android:hint="@string/search_about_tom"
-        android:imeOptions="actionSearch"
-        android:inputType="text"
-        android:paddingStart="12dp"
-        android:textFontWeight="400"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/filterLayout"
-        app:layout_constraintEnd_toStartOf="@id/filterLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/filterLayout" />
-
-    <FrameLayout
-        android:id="@+id/filterLayout"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="@dimen/averageMargin"
-        android:background="@drawable/filter_background"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topBar">
-
-        <ImageButton
-            android:id="@+id/filter_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="@dimen/smallMargin"
-            android:background="@drawable/ic_filter" />
-    </FrameLayout>
-
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/heading_card"
-        android:layout_width="0dp"
-        android:layout_height="92dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="@dimen/averageMargin"
-        android:background="@drawable/gradient_blue_background"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@id/search"
-        app:layout_constraintTop_toBottomOf="@+id/search">
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:paddingBottom="10dp">
 
-        <TextView
-            android:id="@+id/heading_card_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="12dp"
-            android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
-            android:text="@string/buy_1_tom_and_get_2_for_free"
-            android:textColor="@color/white"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <include layout="@layout/top_bar" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="@dimen/averageMargin"
+            android:layout_marginEnd="@dimen/smallMargin"
+            android:autofillHints="emailAddress"
+            android:background="@drawable/search_background"
+            android:drawableStart="@drawable/search_normal"
+            android:drawablePadding="8dp"
             android:fontFamily="@font/ibm_plex_sans_arabic_regular"
-            android:text="@string/adopt_tom_free_fail_free_guarantee"
-            android:textColor="@color/secondaryText"
-            android:textSize="12sp"
-            app:layout_constraintStart_toStartOf="@+id/heading_card_text"
-            app:layout_constraintTop_toBottomOf="@+id/heading_card_text" />
-
-        <ImageView
-            android:layout_width="139.22dp"
-            android:layout_height="113.69dp"
-            android:background="@drawable/ellipse_1"
-            android:translationX="12dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:layout_width="132.05dp"
-            android:layout_height="110.74dp"
-            android:background="@drawable/ellipse_1"
-            android:translationX="12dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="108dp"
-            android:background="@drawable/tom_counting_money"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/cheap_tom_section"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
-        android:text="@string/cheap_tom_section"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="@+id/heading_card"
-        app:layout_constraintTop_toBottomOf="@+id/heading_card" />
-
-    <TextView
-        android:id="@+id/view_all"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:fontFamily="@font/ibm_plex_sans_arabic_medium"
-        android:text="@string/view_all"
-        android:textColor="#03578A"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@+id/cheap_tom_section"
-        app:layout_constraintEnd_toStartOf="@id/view_all_arrow"
-        app:layout_constraintTop_toTopOf="@+id/cheap_tom_section" />
-
-    <ImageView
-        android:id="@+id/view_all_arrow"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="@dimen/averageMargin"
-        android:background="@drawable/arrow_right"
-        app:layout_constraintBottom_toBottomOf="@id/view_all"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/view_all" />
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/first_card"
-        android:layout_width="0dp"
-        android:layout_height="219dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/tom_card_background"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintStart_toStartOf="@id/cheap_tom_section"
-        app:layout_constraintEnd_toStartOf="@id/second_card"
-        app:layout_constraintTop_toBottomOf="@id/cheap_tom_section">
-
-        <ImageView
-            android:id="@+id/first_tom_eating"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/tom_eating"
-            android:translationY="-24dp"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="@string/search_about_tom"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:paddingStart="12dp"
+            android:textFontWeight="400"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/filterLayout"
+            app:layout_constraintEnd_toStartOf="@id/filterLayout"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="@+id/filterLayout" />
 
-        <TextView
-            android:id="@+id/first_sport_tom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
-            android:text="@string/sport_tom"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:translationY="-24dp"
+        <FrameLayout
+            android:id="@+id/filterLayout"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="@dimen/averageMargin"
+            android:background="@drawable/filter_background"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/first_tom_eating" />
+            app:layout_constraintTop_toBottomOf="@+id/topBar">
 
-        <TextView
-            android:id="@+id/first_card_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:fontFamily="@font/ibm_plex_sans_arabic_regular"
-            android:text="@string/he_runs_1_meter_trips_over_his_boot"
-            android:textAlignment="center"
-            android:textColor="#969799"
-            android:textSize="12sp"
-            android:translationY="-24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/first_sport_tom" />
-
-        <!--   number of cheese-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/first_cheese_cost"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/cheese_cost_background"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/first_add_to_cart">
-
-            <ImageView
-                android:id="@+id/first_money_bag"
+            <ImageButton
+                android:id="@+id/filter_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="7dp"
-                android:layout_marginBottom="7dp"
-                android:background="@drawable/ic_money_bag"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/smallMargin"
+                android:background="@drawable/ic_filter" />
+        </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/heading_card"
+            android:layout_width="0dp"
+            android:layout_height="92dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="@dimen/averageMargin"
+            android:background="@drawable/gradient_blue_background"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/search"
+            app:layout_constraintTop_toBottomOf="@+id/search">
+
+            <TextView
+                android:id="@+id/heading_card_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+                android:text="@string/buy_1_tom_and_get_2_for_free"
+                android:textColor="@color/white"
+                android:textSize="16sp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="10dp"
                 android:fontFamily="@font/ibm_plex_sans_arabic_regular"
-                android:text="@string/_3_cheeses"
-                android:textColor="#03578A"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="@id/first_money_bag"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/first_money_bag"
-                app:layout_constraintTop_toTopOf="@id/first_money_bag" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-        <ImageView
-            android:id="@+id/first_add_to_cart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ic_add_to_cart"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginStart="8dp"
-            app:layout_constraintStart_toEndOf="@id/first_cheese_cost"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/second_card"
-        android:layout_width="0dp"
-        android:layout_height="219dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintHorizontal_weight="1"
-        android:layout_marginStart="8dp"
-        android:background="@drawable/tom_card_background"
-        app:layout_constraintBottom_toBottomOf="@id/first_card"
-        app:layout_constraintEnd_toEndOf="@+id/view_all_arrow"
-        app:layout_constraintStart_toEndOf="@id/first_card"
-        >
-
-        <ImageView
-            android:id="@+id/second_tom_eating"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:background="@drawable/second_tom_image"
-            android:translationY="-24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/second_sport_tom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
-            android:text="@string/tom_the_lover"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:translationY="-24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/second_tom_eating" />
-
-        <TextView
-            android:id="@+id/second_card_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:fontFamily="@font/ibm_plex_sans_arabic_regular"
-            android:text="@string/he_loves_one_sidedly_and_is_beaten_by_the_other_side"
-            android:textAlignment="center"
-            android:textColor="#969799"
-            android:textSize="12sp"
-            android:translationY="-24dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/second_sport_tom" />
-
-        <!--   number of cheese-->
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:id="@+id/second_cheese_cost"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/cheese_cost_background"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/second_add_to_cart"
-            app:layout_constraintStart_toStartOf="parent">
+                android:text="@string/adopt_tom_free_fail_free_guarantee"
+                android:textColor="@color/secondaryText"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/heading_card_text"
+                app:layout_constraintTop_toBottomOf="@+id/heading_card_text" />
 
             <ImageView
-                android:id="@+id/second_money_bag"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="7dp"
-                android:layout_marginBottom="7dp"
-                android:background="@drawable/ic_money_bag"
+                android:layout_width="139.22dp"
+                android:layout_height="113.69dp"
+                android:background="@drawable/ellipse_1"
+                android:translationX="12dp"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="132.05dp"
+                android:layout_height="110.74dp"
+                android:background="@drawable/ellipse_1"
+                android:translationX="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="108dp"
+                android:background="@drawable/tom_counting_money"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:id="@+id/cheap_tom_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+            android:text="@string/cheap_tom_section"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/heading_card"
+            app:layout_constraintTop_toBottomOf="@+id/heading_card" />
+
+        <TextView
+            android:id="@+id/view_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="@font/ibm_plex_sans_arabic_medium"
+            android:text="@string/view_all"
+            android:textColor="#03578A"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/cheap_tom_section"
+            app:layout_constraintEnd_toStartOf="@id/view_all_arrow"
+            app:layout_constraintTop_toTopOf="@+id/cheap_tom_section" />
+
+        <ImageView
+            android:id="@+id/view_all_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/averageMargin"
+            android:background="@drawable/arrow_right"
+            app:layout_constraintBottom_toBottomOf="@id/view_all"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/view_all" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/first_card"
+            android:layout_width="0dp"
+            android:layout_height="219dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/tom_card_background"
+            app:layout_constraintEnd_toStartOf="@id/second_card"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@id/cheap_tom_section"
+            app:layout_constraintTop_toBottomOf="@id/cheap_tom_section">
+
+            <ImageView
+                android:id="@+id/first_tom_eating"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/tom_eating"
+                android:translationY="-24dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
+                android:id="@+id/first_sport_tom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="4dp"
-                android:layout_marginEnd="10dp"
-                android:fontFamily="@font/ibm_plex_sans_arabic_regular"
-                android:text="@string/_5_cheeses"
-                android:textColor="#03578A"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="@id/second_money_bag"
+                android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+                android:text="@string/sport_tom"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationY="-24dp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/second_money_bag"
-                app:layout_constraintTop_toTopOf="@id/second_money_bag" />
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/first_tom_eating" />
+
+            <TextView
+                android:id="@+id/first_card_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+                android:text="@string/he_runs_1_meter_trips_over_his_boot"
+                android:textAlignment="center"
+                android:textColor="#969799"
+                android:textSize="12sp"
+                android:translationY="-24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/first_sport_tom" />
+
+            <!--   number of cheese-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/first_cheese_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/cheese_cost_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/first_add_to_cart"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/first_money_bag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@drawable/ic_money_bag"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+                    android:text="@string/_3_cheeses"
+                    android:textColor="#03578A"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/first_money_bag"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/first_money_bag"
+                    app:layout_constraintTop_toTopOf="@id/first_money_bag" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/first_add_to_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/ic_add_to_cart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/first_cheese_cost" />
+
         </androidx.constraintlayout.widget.ConstraintLayout>
 
-        <ImageView
-            android:id="@+id/second_add_to_cart"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/second_card"
+            android:layout_width="0dp"
+            android:layout_height="219dp"
             android:layout_marginStart="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
-            android:background="@drawable/ic_add_to_cart"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/second_cheese_cost" />
+            android:layout_marginTop="32dp"
+            android:background="@drawable/tom_card_background"
+            app:layout_constraintBottom_toBottomOf="@id/first_card"
+            app:layout_constraintEnd_toEndOf="@+id/view_all_arrow"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/first_card">
+
+            <ImageView
+                android:id="@+id/second_tom_eating"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/second_tom_image"
+                android:translationY="-24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/second_sport_tom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+                android:text="@string/tom_the_lover"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationY="-24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/second_tom_eating" />
+
+            <TextView
+                android:id="@+id/second_card_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+                android:text="@string/he_loves_one_sidedly_and_is_beaten_by_the_other_side"
+                android:textAlignment="center"
+                android:textColor="#969799"
+                android:textSize="12sp"
+                android:translationY="-24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/second_sport_tom" />
+
+            <!--   number of cheese-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/second_cheese_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/cheese_cost_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/second_add_to_cart"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/second_money_bag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@drawable/ic_money_bag"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+                    android:text="@string/_5_cheeses"
+                    android:textColor="#03578A"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/second_money_bag"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/second_money_bag"
+                    app:layout_constraintTop_toTopOf="@id/second_money_bag" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/second_add_to_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/ic_add_to_cart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/second_cheese_cost" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/third_card"
+            android:layout_width="0dp"
+            android:layout_height="219dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/tom_card_background"
+            app:layout_constraintEnd_toStartOf="@id/fourth_card"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@id/first_card"
+            app:layout_constraintTop_toBottomOf="@id/first_card">
+
+            <ImageView
+                android:id="@+id/third_tom_eating"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/third_tom_image"
+                android:translationY="-24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/third_sport_tom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+                android:text="@string/tom_the_bomb"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationY="-24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/third_tom_eating" />
+
+            <TextView
+                android:id="@+id/third_card_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+                android:text="@string/he_blows_himself_up_before_jerry_can_catch_him"
+                android:textAlignment="center"
+                android:textColor="#969799"
+                android:textSize="12sp"
+                android:translationY="-24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/third_sport_tom" />
+
+            <!--   number of cheese-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/third_cheese_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/cheese_cost_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/third_add_to_cart"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/third_money_bag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@drawable/ic_money_bag"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+                    android:text="@string/_10_cheeses"
+                    android:textColor="#03578A"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/third_money_bag"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/third_money_bag"
+                    app:layout_constraintTop_toTopOf="@id/third_money_bag" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/third_add_to_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/ic_add_to_cart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/third_cheese_cost" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fourth_card"
+            android:layout_width="0dp"
+            android:layout_height="219dp"
+            android:layout_marginTop="28dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/tom_card_background"
+            app:layout_constraintStart_toEndOf="@id/third_card"
+            app:layout_constraintEnd_toEndOf="@+id/view_all_arrow"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toBottomOf="@id/second_card">
+
+            <ImageView
+                android:id="@+id/fourth_tom_eating"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/fourth_tom_image"
+                android:translationY="-24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/fourth_sport_tom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+                android:text="@string/spy_tom"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationY="-24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fourth_tom_eating" />
+
+            <TextView
+                android:id="@+id/fourth_card_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+                android:text="@string/disguises_itself_as_a_table"
+                android:textAlignment="center"
+                android:textColor="#969799"
+                android:textSize="12sp"
+                android:translationY="-24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fourth_sport_tom" />
+
+            <!--   number of cheese-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/fourth_cheese_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/cheese_cost_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/fourth_add_to_cart"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/fourth_money_bag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@drawable/ic_money_bag"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+                    android:text="@string/_12_cheeses"
+                    android:textColor="#03578A"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/fourth_money_bag"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/fourth_money_bag"
+                    app:layout_constraintTop_toTopOf="@id/fourth_money_bag" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/fourth_add_to_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/ic_add_to_cart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/fourth_cheese_cost" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/fifth_card"
+            android:layout_width="0dp"
+            android:layout_height="219dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/tom_card_background"
+            app:layout_constraintEnd_toStartOf="@id/sixth_card"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="@id/third_card"
+            app:layout_constraintTop_toBottomOf="@id/third_card">
+
+            <ImageView
+                android:id="@+id/fifth_tom_eating"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:background="@drawable/fifth_tom_image"
+                android:translationY="-24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/fifth_sport_tom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+                android:text="@string/spy_tom"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationY="-24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fifth_tom_eating" />
+
+            <TextView
+                android:id="@+id/fifth_card_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+                android:text="@string/disguises_itself_as_a_table"
+                android:textAlignment="center"
+                android:textColor="#969799"
+                android:textSize="12sp"
+                android:translationY="-24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/fifth_sport_tom" />
+
+            <!--   number of cheese-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/fifth_cheese_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/cheese_cost_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/fifth_add_to_cart"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/fifth_money_bag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@drawable/ic_money_bag"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+                    android:text="@string/_10_cheeses"
+                    android:textColor="#03578A"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/fifth_money_bag"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/fifth_money_bag"
+                    app:layout_constraintTop_toTopOf="@id/fifth_money_bag" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/fifth_add_to_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/ic_add_to_cart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/fifth_cheese_cost" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sixth_card"
+            android:layout_width="0dp"
+            android:layout_height="219dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/tom_card_background"
+            app:layout_constraintEnd_toEndOf="@id/fourth_card"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/fifth_card"
+            app:layout_constraintTop_toBottomOf="@id/fourth_card"
+            app:layout_constraintTop_toTopOf="@id/fifth_card">
+
+            <ImageView
+                android:id="@+id/sixth_tom_eating"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:scaleX="1.5"
+                android:scaleY="1.7"
+                android:background="@drawable/sixth_tom_image"
+                android:translationY="-54dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/sixth_sport_tom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/ibm_plex_sans_arabic_semi_bold"
+                android:text="@string/spy_tom"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:translationY="-24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sixth_tom_eating" />
+
+            <TextView
+                android:id="@+id/sixth_card_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+                android:text="@string/disguises_itself_as_a_table"
+                android:textAlignment="center"
+                android:textColor="#969799"
+                android:textSize="12sp"
+                android:translationY="-24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sixth_sport_tom" />
+
+            <!--   number of cheese-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/sixth_cheese_cost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/cheese_cost_background"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/sixth_add_to_cart"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <ImageView
+                    android:id="@+id/sixth_money_bag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginBottom="7dp"
+                    android:background="@drawable/ic_money_bag"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginEnd="10dp"
+                    android:fontFamily="@font/ibm_plex_sans_arabic_regular"
+                    android:text="@string/_10_cheeses"
+                    android:textColor="#03578A"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/sixth_money_bag"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/sixth_money_bag"
+                    app:layout_constraintTop_toTopOf="@id/sixth_money_bag" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/sixth_add_to_cart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/ic_add_to_cart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/sixth_cheese_cost" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
