@@ -97,7 +97,7 @@
                 android:layout_width="139.22dp"
                 android:layout_height="113.69dp"
                 android:background="@drawable/ellipse_1"
-                android:translationX="12dp"
+                android:translationX="40dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -106,7 +106,7 @@
                 android:layout_width="132.05dp"
                 android:layout_height="110.74dp"
                 android:background="@drawable/ellipse_1"
-                android:translationX="12dp"
+                android:translationX="40dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -207,10 +207,11 @@
             <!--   number of cheese-->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/first_cheese_cost"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginBottom="8dp"
+                app:layout_constraintHorizontal_weight="1"
                 android:background="@drawable/cheese_cost_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/first_add_to_cart"
@@ -311,10 +312,11 @@
             <!--   number of cheese-->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/second_cheese_cost"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginBottom="8dp"
+                app:layout_constraintHorizontal_weight="1"
                 android:background="@drawable/cheese_cost_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/second_add_to_cart"
@@ -414,10 +416,11 @@
             <!--   number of cheese-->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/third_cheese_cost"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginBottom="8dp"
+                app:layout_constraintHorizontal_weight="1"
                 android:background="@drawable/cheese_cost_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/third_add_to_cart"
@@ -517,10 +520,11 @@
             <!--   number of cheese-->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/fourth_cheese_cost"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginBottom="8dp"
+                app:layout_constraintHorizontal_weight="1"
                 android:background="@drawable/cheese_cost_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/fourth_add_to_cart"
@@ -619,10 +623,11 @@
             <!--   number of cheese-->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/fifth_cheese_cost"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginBottom="8dp"
+                app:layout_constraintHorizontal_weight="1"
                 android:background="@drawable/cheese_cost_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/fifth_add_to_cart"
@@ -724,10 +729,11 @@
             <!--   number of cheese-->
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/sixth_cheese_cost"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginBottom="8dp"
+                app:layout_constraintHorizontal_weight="1"
                 android:background="@drawable/cheese_cost_background"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@id/sixth_add_to_cart"
