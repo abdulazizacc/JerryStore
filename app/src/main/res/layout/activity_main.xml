@@ -17,7 +17,7 @@
 
         <include layout="@layout/top_bar" />
 
-        <EditText
+        <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/search"
             android:layout_width="0dp"
             android:layout_height="48dp"
@@ -32,8 +32,8 @@
             android:imeOptions="actionSearch"
             android:inputType="text"
             android:paddingStart="12dp"
-            android:textFontWeight="400"
             android:textSize="14sp"
+            android:textColorHint="#969799"
             app:layout_constraintBottom_toBottomOf="@+id/filterLayout"
             app:layout_constraintEnd_toStartOf="@id/filterLayout"
             app:layout_constraintStart_toStartOf="parent"
